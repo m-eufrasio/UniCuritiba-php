@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(180, 224, 241);
+    font-size: 50px;
+}
+
+input {
+    background-color: rgb(180, 243, 222);
+    font-size: 40px;
+}
+
+input:hover, input:focus {
+    background-color: azure;
+    border-radius: 5px;
+}
