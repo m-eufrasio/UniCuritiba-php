@@ -11,9 +11,12 @@
         if (@$_REQUEST['botao'] == "Gravar") {
 
             $nome = $_POST['nome'];
+            $sobrenome = $_POST['sobrenome'];
             $idade = $_POST['idade'];
+            $altura = $_POST['altura'];
 
-            $query = "INSERT INTO clientes (nome, idade) values ('$nome', '$idade')";
+
+            $query = "INSERT INTO clientes (nome, sobrenome, idade, altura) values ('$nome', '$sobrenome', '$idade', '$altura')";
             $var = mysqli_query($con, $query);
 
             if (!$var) print mysqli_error($con);
@@ -30,19 +33,26 @@
         }
 
         ?>
-        <form action=# method="POST">
-
-        NOME: <input type="text" name="nome" required value="<?php print @$nome; ?>">
-        IDADE: <input type="text" name="idade" required value="<?php print @$idade; ?>"> 
-        <input type="submit" name="botao" value="Gravar">
+        <h3>UNICURITIBA</h3>
         <hr>
-        
-        </form>
+        <div class="box">
+            <div class="box2">
+                <form action=# method="POST">
 
-        <form action=# method="POST">
-            Código: <input type="text" name="codigo" size=4 value="<?php print @$codigo; ?>">
+                Nome: <input type="text" name="nome" required value="<?php print @$nome; ?>">
+                Sobrenome: <input type="text" name="sobrenome" requried value="<?php @$sobrenome; ?>">
+                Idade: <input type="text" name="idade" required value="<?php print @$idade; ?>"> 
+                Altura: <input type="text" name="altura" required value="<?php print @$altura; ?>">
+                <input type="submit" name="botao" id="botao" value="Gravar">
+                
+                </form>
 
-            <input type="submit" name="botao" value="Apagar">
-        </form>
+                <form action=# method="POST">
+                    Código: <input type="text" name="codigo" size=4 value="<?php print @$codigo; ?>">
+
+                    <input type="submit" name="botao" id="botao" value="Apagar">
+                </form>
+            </div>
+        </div>
     </body>
 </html>

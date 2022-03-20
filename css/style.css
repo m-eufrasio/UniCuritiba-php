@@ -1,14 +1,46 @@
 body {
-    background-color: rgb(180, 224, 241);
+    background-image:linear-gradient(to right, rgb(1, 106, 204), rgb(133, 18, 133) );
     font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 input {
-    background-color: rgb(180, 243, 222);
     font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+    border-radius: 5px;
+    border: none;
 }
 
-input:hover, input:focus {
-    background-color: azure;
+h3 {
+    text-align: center;
+    color: rgb(187, 241, 223);
+}
+
+#botao {
+    background-color: rgb(8, 185, 82);
     border-radius: 5px;
+    outline: none;
+    border: none;
+    margin-top: 10px;
+    font-size: 35px;
+}
+
+#botao:hover {
+    background-color: rgb(187, 241, 223);
+    transition: 0.5s;
+}
+
+.box {
+    background-color: rgb(255, 255, 255, 0.3);
+    width: 600px;
+    height: 670px;
+    margin: 60px 0 0 650px;
+    border-radius: 5px;
+}
+
+.box2 {
+    width: 500px;
+    position: absolute;
+    margin: 35px 0 0 50px;
 }
