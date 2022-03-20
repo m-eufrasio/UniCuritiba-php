@@ -13,7 +13,7 @@
             $nome = $_POST['nome'];
             $idade = $_POST['idade'];
 
-            $query = "INSERT INTO cliente (nome, idade) values ('$nome', '$idade')";
+            $query = "INSERT INTO clientes (nome, idade) values ('$nome', '$idade')";
             $var = mysqli_query($con, $query);
 
             if (!$var) print mysqli_error($con);
@@ -23,7 +23,7 @@
         if (@$_REQUEST['botao'] == "Apagar") {
             $codigo = $_POST['codigo'];
 
-            $query = " DELETE FROM cliente WHERE id = '$codigo' ";
+            $query = " DELETE FROM clientes WHERE id = '$codigo' ";
             $var = mysqli_query($con, $query);
 
             if (!$var) print mysqli_error($con);
