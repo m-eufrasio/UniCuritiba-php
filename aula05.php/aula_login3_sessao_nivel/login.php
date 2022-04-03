@@ -3,17 +3,18 @@ include ('config.php');
 session_start(); // inicia a sessao	
 
 
-if (@$_REQUEST['botao'] == "Entrar")
+if (@$_REQUEST['botao']=="Entrar")
 {
 	$login = $_POST['login'];
 	$senha = $_POST['senha'];
 	
-	$query = "SELECT * FROM clientes WHERE login = '$login' AND senha = '$senha' ";
+	$query = "SELECT * FROM usuario WHERE login = '$login' AND senha = '$senha' ";
 	$result = mysqli_query($con, $query);
-	while ($coluna=mysqli_fetch_array($result)) 
+
+	while ($coluna = mysqli_fetch_array($result)) 
 	{
 		$_SESSION["id_usuario"]= $coluna["id"]; 
-		$_SESSION["nome_usuario"] = $coluna["name"]; 
+		$_SESSION["nome_usuario"] = $coluna["login"]; 
 		$_SESSION["UsuarioNivel"] = $coluna["nivel"];
 
 		// caso queira direcionar para páginas diferentes
@@ -39,7 +40,7 @@ if (@$_REQUEST['botao'] == "Entrar")
 <body>
 <form action=# method=post>
 
-Login: <input type=text name=name>
+Login: <input type=text name=login>
 Senha: <input type=text name=senha>
 <input type=submit name=botao value=Entrar>
 
