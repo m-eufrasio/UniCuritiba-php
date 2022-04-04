@@ -1,0 +1,124 @@
+body {
+    /* background: linear-gradient(287deg, #c850c0, #6941d0); */
+    background-color: #2a8cdd;
+    padding: 0;
+    margin: 0;
+}
+
+.ola {
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    color: #ffffff;
+    margin-left: 15px;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.sair {
+    background-color: #ffffff;
+    color: black;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    float: right;
+    margin-top: 5px;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.sair:hover {
+    transition: 0.5s;
+    background-color: rgb(33, 185, 91);
+    border: 2px solid rgb(33, 185, 91);
+    color: white;
+}
+
+.camposBusca {
+    margin: 40px auto 0 auto;
+    width: 1700px;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 20px 0 rgba(194, 193, 193, 0.2), 0 5px 5px 0 rgba(194, 193, 193, 0.24);
+}
+
+.campos {
+    text-align: center;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+    outline: 0;
+}
+
+.campdadosBusca {
+    margin: 10px;
+    padding-left: 40px;
+    border: none;
+    border-radius: 2px;
+    background-color: rgb(192, 196, 199);
+    height: 25px;
+}
+
+.btnGerar {
+    background-color: #2a8cdd;
+    width: 90px;
+    border: 1px solid #2a8cdd;
+    padding: 6px 0;
+    margin: 1px 0;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.btnGerar:hover {
+    background-color: rgb(33, 185, 91);
+    color: #ffffff;
+    border: 1px solid rgb(33, 185, 91);
+}
+
+.tabela {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.tabela,
+tr,
+th,
+td {
+    border: 1px solid rgb(155, 155, 155);
+}
+
+th {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    height: 50px;
+    border: 1px solid black;
+    background-color: #d3d3d3;
+    color: rgb(0, 0, 0);
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+tr:hover {
+    background-color: #f5f5f5
+}
