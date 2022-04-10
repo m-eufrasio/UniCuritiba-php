@@ -1,0 +1,113 @@
+body {
+    background-color: #2a8cdd;
+    padding: 0;
+    margin: 0;
+}
+
+hr {
+    margin-top: 50px;
+}
+
+.ola {
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    color: #ffffff;
+    margin-left: 15px;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.sair {
+    background: #2a8cdd;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgb(237, 236, 236);
+    text-shadow: none;
+    width: 100px;
+    height: 41px;
+    margin-top: 50px;
+}
+
+.sair:hover {
+    transition: 0.5s;
+    background: rgb(33, 185, 91);
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgb(237, 236, 236);
+    text-shadow: none;
+}
+
+.painelMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.menu {
+    background-color: rgb(255 255 255);
+    padding: 40px;
+    border-radius: 5px;
+    width: 100px;
+    box-shadow: 0px 0px 11px 1px #d8cbcb;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.btnCadastrar {
+    background: #2a8cdd;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgb(237, 236, 236);
+    text-shadow: none;
+    width: 100px;
+    height: 41px;
+}
+
+.btnCadastrar:hover {
+    transition: 0.5s;
+    background: rgb(33, 185, 91);
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgb(237, 236, 236);
+    text-shadow: none;
+}
+
+.btnRelatorio {
+    background: #2a8cdd;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgb(237, 236, 236);
+    text-shadow: none;
+    width: 100px;
+    height: 41px;
+}
+
+.btnRelatorio:hover {
+    transition: 0.5s;
+    background: rgb(33, 185, 91);
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgb(237, 236, 236);
+    text-shadow: none;
+}
