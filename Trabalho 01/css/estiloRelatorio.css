@@ -1,16 +1,5 @@
 body {
-    /* background: linear-gradient(287deg, #c850c0, #6941d0); */
-    background-color: #2a8cdd;
-    padding: 0;
-    margin: 0;
-}
-
-.ola {
-    font-size: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 5px;
-    color: #ffffff;
-    margin-left: 15px;
+    background: linear-gradient(0.25turn, #229fe7, #294ce4);
 }
 
 @keyframes gradient {
@@ -27,15 +16,50 @@ body {
     }
 }
 
+.nav {
+    padding: 20px;
+}
+
+.ola {
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    color: #ffffff;
+    margin-left: 15px;
+}
+
+.white-box {
+    height: 1000px;
+    width: 1700px;
+    background-color: #ffffffbd;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.wb-center {
+    height: 900px;
+    width: 1500px;
+    padding: 50px;
+    margin: auto;
+}
+
+.tituloliberar{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    color: #000000;
+  text-align: center;
+}
+
 .sair {
     background-color: #ffffff;
     color: black;
     border: 2px solid #ffffff;
-    border-radius: 5px;
+    border-radius: 2px;
     float: right;
     margin-top: 5px;
     margin-right: 10px;
-    padding: 5px;
+    padding: 7px;
 }
 
 .sair:hover {
@@ -45,17 +69,52 @@ body {
     color: white;
 }
 
-.camposBusca {
+.camposBusca-libera {
+    background-color: #ffffff;
     margin: 40px auto 0 auto;
-    width: 1700px;
+    width: 700px;
     padding: 5px 5px 5px 5px;
     border-radius: 5px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 0 20px 0 rgba(194, 193, 193, 0.2), 0 5px 5px 0 rgba(194, 193, 193, 0.24);
+    box-shadow: 0 0 20px 0 rgba(243, 241, 241, 0.2), 0 5px 5px 0 rgba(194, 193, 193, 0.24);
+}
+
+.camposBusca {
+    background: linear-gradient(0.25turn, #229fe7, #294ce4);
+    margin: 40px auto 0 auto;
+    width: 700px;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 0 rgba(243, 241, 241, 0.2), 0 5px 5px 0 rgba(194, 193, 193, 0.24);
+}
+
+.camposBuscaanun {
+    margin: 40px auto 0 auto;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    background: linear-gradient(0.25turn, #229fe7, #294ce4);
+    box-shadow: 0 0 20px 0 rgba(243, 241, 241, 0.2), 0 5px 5px 0 rgba(194, 193, 193, 0.24);
+}
+
+.tabeladiv{
+   
+        margin: 40px auto 0 auto;
+       
+        padding: 5px 5px 5px 5px;
+        border-radius: 5px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.2), 0 5px 5px 0 rgba(194, 193, 193, 0.24);
+    
 }
 
 .campos {
     text-align: center;
+  
+}
+
+.campoliberar {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 textarea:focus,
@@ -69,14 +128,14 @@ select:focus {
     padding-left: 40px;
     border: none;
     border-radius: 2px;
-    background-color: rgb(192, 196, 199);
+    background-color: rgb(255, 255, 255);
     height: 25px;
 }
 
 .btnGerar {
-    background-color: #2a8cdd;
+    background-color: rgb(33, 185, 91);
+    border: 1px solid rgb(33, 185, 91);
     width: 90px;
-    border: 1px solid #2a8cdd;
     padding: 6px 0;
     margin: 1px 0;
     text-align: center;
@@ -86,9 +145,52 @@ select:focus {
 }
 
 .btnGerar:hover {
-    background-color: rgb(33, 185, 91);
     color: #ffffff;
+    background-color: #24c5aa;
+    border: 1px solid #24c5aa;
+    transition: 0.5s;
+}
+
+.btn-libera-anuncio {
+    background-color: rgb(33, 185, 91);
     border: 1px solid rgb(33, 185, 91);
+    width: 90px;
+    padding: 6px 0;
+    margin: 1px 0;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.btn-libera-anuncio:hover {
+    color: #ffffff;
+    background-color: #24c5aa;
+    border: 1px solid #24c5aa;
+    transition: 0.5s;
+}
+
+.btn-reprova-anuncio {
+    background-color: rgb(179, 45, 28);
+    border: 1px solid rgb(179, 45, 28);
+    width: 90px;
+    padding: 6px 0;
+    margin: 1px 0;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.btn-reprova-anuncio:hover {
+    color: #ffffff;
+    background-color: #eb5252;
+    border: 1px solid #eb5252;
+    transition: 0.5s;
+}
+
+.label-liberar-anuncios {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .tabela {
@@ -110,7 +212,7 @@ th {
     font-size: 14px;
     height: 50px;
     border: 1px solid black;
-    background-color: #d3d3d3;
+    background-color: #0f9aeb;
     color: rgb(0, 0, 0);
 }
 
@@ -120,5 +222,5 @@ td {
 }
 
 tr:hover {
-    background-color: #f5f5f5
+    background-color: #c9ddf3
 }

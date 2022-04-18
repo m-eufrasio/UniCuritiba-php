@@ -5,72 +5,40 @@ include('config.php');
 $id_anuncio = @$_REQUEST['id_anuncio'];
 $id_usuario = @$_SESSION['id_usuario'];
 
-
-
 if (@$_REQUEST['botao'] == "Gravar") {
 
-    if (@!$_REQUEST['id_anuncio']) {
-        $insere = "INSERT into anuncios ( titulo,  preco, categoria_id, id_usuario) VALUES
-                (  '{$_POST['titulo']}',
-                '{$_POST['preco']}',
-                '{$_POST['categoria_id']}',
-                   '$id_usuario')";
-
-        $result_insere = mysqli_query($con, $insere);
-
-        if ($result_insere) print '<script> alert("Registro inserido com sucesso!") </script>';
-        else print '<script> "Não foi possível inserir!" </script>';
-    } else {
+    if (@$_REQUEST['id_anuncio']) {
         $insere = "UPDATE anuncios SET 
-                       titulo = '{$_POST['titulo']}'
-                       , preco = '{$_POST['preco']}'
-                       , categoria_id = '{$_POST['categoria_id']}'
-                       WHERE id_anuncio = '{$_REQUEST['id_anuncio']}'
-                   ";
+                        titulo = '{$_POST['titulo']}'
+                        , preco = '{$_POST['preco']}'
+                        , categoria_id = '{$_POST['categoria_id']}'
+                        WHERE id_anuncio = '{$_REQUEST['id_anuncio']}'
+                    ";
         $result_update = mysqli_query($con, $insere);
 
         if ($result_update) print '<script> alert("Anúncio atualizado com sucesso!") </script>';
         else print '<script> alert("Não foi possível efetuar a atualização do anúncio.") </script>';
     }
+    else {
+        print '<script> alert("Não foi possível efetuar a atualização do anúncio.") </script>';
+    }
 }
-
-
 ?>
 
-
 <!DOCTYPE html>
-
-
-
 <html>
 
 <head>
-    <title> Publicar anúncio </title>
+    <title> Editar anúncio </title>
     <link rel="stylesheet" href="css/estiloCadastro.css">
-
 </head>
 
 <body>
-<div class="cabecalho">
-        <div>
 
-        <?php if ($verificar) { ?>
-            <label class="ola"> Olá <?php 
-                               echo $_SESSION["nome_usuario"];  ?> - Anunciar </label>
-                               
-                             
-
-<?php }  ?>
-
- 
-  
-   
- 
-
-  
-   
-        </div>
-    </div>
+    <?php if ($verificar) { ?>
+        <label class="ola"> Olá <?php 
+        print $_SESSION["nome_usuario"];  ?> - Editar </label>
+    <?php }  ?>
 
     <br>
     <div class="conteudo">
@@ -79,12 +47,12 @@ if (@$_REQUEST['botao'] == "Gravar") {
 
                 <div>
                     <label for=""> Título: </label>
-                    <input type="text" class="campoCadastro" name="titulo" required value="<?php echo @$_POST['titulo']; ?>">
+                    <input type="text" class="campoCadastro" name="titulo" required value="<?php print @$_POST['titulo']; ?>">
                 </div><br>
 
                 <div>
                     <label for=""> Preço: </label>
-                    <input type="text" class="campoCadastro" name="preco" required value="<?php echo @$_POST['preco']; ?>">
+                    <input type="text" class="campoCadastro" name="preco" required value="<?php print @$_POST['preco']; ?>">
                 </div><br>
 
                 <div>
@@ -102,22 +70,17 @@ if (@$_REQUEST['botao'] == "Gravar") {
                                                                                                                                                                 }
                                                                                                                                                                     ?>
                     </select>
-                </div>
-                <br>
-
-
-                <br>
+                </div><br>
 
                 <div>
                     <input type="submit" value="Gravar" class="btn-gravar" name="botao">
                     <br><br>
-                    <input type="hidden" name="id" value="<?php echo @$_REQUEST['id'] ?>" />
+                    <input type="hidden" name="id" value="<?php print @$_REQUEST['id'] ?>" />
                 </div>
 
             </form>
 
         </div>
-
     </div>
 
     <div class="divMenuSair">

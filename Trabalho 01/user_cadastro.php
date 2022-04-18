@@ -29,7 +29,8 @@
     if (@$_REQUEST['botao'] == "Gravar") {
         
         @$senha = md5 ($_POST['senha']);
-
+   
+        
         if (!$_REQUEST['id']) {
             $insere = "INSERT into usuario (nome, login, senha, nivel) VALUES ('{$_POST['nome']}', '{$_POST['login']}', '$senha', '{$_POST['nivel']}')";
             $result_insere = mysqli_query($con, $insere);
@@ -54,14 +55,11 @@
         }
     }
     ?>
-    <?php
-    require('verifica.php');
-    if ($_SESSION["UsuarioNivel"] != "ADM") echo "<script>alert('Você não é Administrador!');top.location.href='menu.php';</script>";
-    ?>
+
     <div>
         <div>
       
-            <label class="ola"> Olá <?php echo $_SESSION["nome_usuario"]; ?> - Cadastrar usuarios </label>
+            <label class="ola"> Olá - Cadastrar  </label>
             
           
         </div>
@@ -75,32 +73,28 @@
 
                 <div>
                     <label for="">Nome: </label>
-                    <input type="text" class="campoCadastro" name="nome" required value="<?php echo @$_POST['nome']; ?>">
+                    <input type="text" class="campoCadastro" name="nome" required value="<?php print @$_POST['nome']; ?>">
                 </div><br>
 
                 <div>
                     <label for="">Login: </label>
-                    <input type="text" class="campoCadastro" name="login" required value="<?php echo @$_POST['login']; ?>">
+                    <input type="text" class="campoCadastro" name="login" required value="<?php print @$_POST['login']; ?>">
                 </div><br>
 
                 <div>
                     <label for="">Senha: </label>
-                    <input type="text" class="campoCadastro" name="senha" required value="<?php echo @$_POST['senha']; ?>">
-                </div>
-                <br>
+                    <input type="password" class="campoCadastro" name="senha" required value="<?php print @$_POST['senha']; ?>">
+                </div><br>
 
                 <div>
-                    <label for="">Nivel: </label>
-                    ADM: <input type="radio" class="campoCadastro" name="nivel" required value= "ADM">
-                    USER: <input type="radio" class="campoCadastro" name="nivel" required value="USER" >
-                 
-                </div>
-
-                <br>
+                     <input type="radio" class="checked" required checked name="nivel" required value="USER" > </input>
+                </div><br>
+            
                 <div >
                     <input type="submit" value="Gravar" class="btn-gravar" name="botao">
                     <br><br>
-                    <input type="hidden" name="id" value="<?php echo @$_REQUEST['id'] ?>" />
+                    <input type="hidden" name="id" value="<?php print @$_REQUEST['id'] ?>" />
+                   
                 </div>
             </form>
         </div>

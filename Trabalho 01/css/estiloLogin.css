@@ -1,7 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    background: linear-gradient(-135deg, #22c049, #237de4);
+    background: linear-gradient(0.25turn, #229fe7, #294ce4);
 }
 
 @keyframes gradient {
@@ -35,6 +35,7 @@ body {
 }
 
 .card-header {
+    text-align: center;
     padding-bottom: 50px;
     opacity: 0.8;
     color: #076dc0;

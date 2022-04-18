@@ -6,14 +6,14 @@ session_start(); // inicia a sessao
 if (@$_REQUEST['botao'] == "Entrar") {
 
 	@$login = $_POST['login'];
-	@$senha = $_POST['senha'];
+	@$senha = md5 ($_POST['senha']);
 
 	$query = " SELECT * FROM usuario WHERE login = '$login' AND senha = '$senha' ";
 	$result = mysqli_query($con, $query);
 
 	while ($coluna = mysqli_fetch_array($result)) {
 
-		$_SESSION["id_usuario"] = $coluna["id"];
+		$_SESSION["id_usuario"] = $coluna["id_usuario"];
 		$_SESSION["login_usuario"] = $coluna["login"];
 		$_SESSION["nome_usuario"] = $coluna["nome"];
 		$_SESSION["UsuarioNivel"] = $coluna["nivel"];
