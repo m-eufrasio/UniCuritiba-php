@@ -12,7 +12,7 @@
     $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 
     if(!empty($id)) {
-        $query_excluir = " DELETE FROM anuncios WHERE id = '$id' ";
+        $query_excluir = " DELETE FROM anuncios WHERE id_anuncio = '$id' ";
         $result_excluir = mysqli_query($con, $query_excluir);
         if (mysqli_affected_rows($con)) {
             print '<script> alert("Anúncio excluído com sucesso!") </script>';
@@ -77,7 +77,7 @@
             <div class="tabeladiv">
             <table class="tabela">
         <tr>
-                        <th> C&oacute;d. </th>
+                     
                         <th> Título </th>
                         <th> Preço </th>
                         <th> Status </th>
@@ -112,7 +112,7 @@
 
         
             <tr>
-            <td><?php print $coluna['id_anuncio']; ?></td>
+        
             <td><?php print $coluna['titulo']; ?></td>
             <td><?php print $coluna['preco']; ?></td>
             <td><?php print @$nome_status[$coluna['status']]; ?></td>
@@ -123,11 +123,11 @@
 
             <td style="text-align: center!important; align-items: center;">
 
-        <a href="meus_anuncios.php?pag=meus_anuncios&id=<?php print $coluna['id_anuncio']; ?>">
+        <a href="anuncios.php?pag=anuncios&id=<?php print $coluna['id_anuncio']; ?>">
             <img src="img\delete.png" alt="Excluir um anúncio" style="max-width: 23px;">
         </a>
         
-        <a href="editar_anuncio.php?pag=editar_anuncio&id=<?php print $coluna['id_anuncio']; ?>">
+        <a href="cadastrar_anuncio.php?pag=cadastrar_anuncio&id_anuncio=<?php print $coluna['id_anuncio']; ?>">
             <img src="img\editar.png" alt="Editar um anúncio" style="max-width: 23px;">
         </a>
         </td>

@@ -14,7 +14,7 @@
 	if (@$_REQUEST['id'] and !@$_REQUEST['botao']) {
 
 		$query = "
-		SELECT * FROM usuario WHERE id='{$_REQUEST['id']}'
+		SELECT * FROM categoria WHERE id='{$_REQUEST['id']}'
 	";
 		$result = mysqli_query($con, $query);
 		$row = mysqli_fetch_assoc($result);
@@ -40,6 +40,16 @@
             }
             else print '<script> alert("Nao consegui inserir!") </script>';
         } 
+        else {
+            $insere = "UPDATE categoria SET 
+                           area = '{$_POST['area']}'
+                           WHERE id= '{$_REQUEST['id']}'
+                       ";
+            $result_update = mysqli_query($con, $insere);
+    
+            if ($result_update) print '<script> alert("Anúncio atualizado com sucesso!") </script>';
+            else print '<script> alert("Não foi possível efetuar a atualização do anúncio.") </script>';
+        }
     }
     ?>
     <?php

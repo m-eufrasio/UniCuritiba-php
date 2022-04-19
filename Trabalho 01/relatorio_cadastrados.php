@@ -33,12 +33,13 @@
     <div class="wb-center">
 
             <div class="camposBusca">
-                <form action="relatorio.php?botao=gravar" method="POST" name="form1">
+                <form action="relatorio_cadastrados.php?botao=gravar" method="POST" name="form1">
                     <div class="campos">
-                        <label for="" width="5%"> Código: </label>
-                        <input class="campdadosBusca" type="text" name="id">
+                 
                         <label for="" width="5%"> Nome: </label>
                         <input class="campdadosBusca" type="text" name="login">
+                        <label for="" width="5%"> Nivel: </label>
+                        <input class="campdadosBusca" type="text" name="nivel">
                         <button type="submit" name="botao" value="Gerar" class="btnGerar"> Buscar </button>
                     </div>
                 </form>
@@ -56,6 +57,7 @@
                         <th> Editar </th>
                     </tr>
                     <?php
+                    @$id_usuario = $_POST['id_usuario'];
                     @$login = $_POST['login'];
                     @$senha = $_POST['senha'];
                     @$nivel = $_POST['nivel'];
@@ -63,6 +65,7 @@
                     $query = "SELECT *
                                     FROM usuario 
                                     WHERE id_usuario > 0 ";
+                  $query .= ($id_usuario ? " AND id_usuario LIKE '%$$id_usuario%' " : "");
                     $query .= ($login ? " AND login LIKE '%$login%' " : "");
                     $query .= ($senha ? " AND senha LIKE '%$senha%' " : "");
                     $query .= ($nivel ? " AND nivel LIKE '%$nivel%' " : "");
@@ -79,11 +82,11 @@
                             <td style="text-align: center!important; align-items: center;">
                             </div>
 
-                            <a href="relatorio_cadastrados.php?pag=relatorio_cadastrados&id=<?php echo $coluna['id_usuario']; ?>">
+                            <a href="relatorio_cadastrados.php?pag=relatorio_cadastrados&id_usuario=<?php echo $coluna['id_usuario']; ?>">
                                                         <img src="img\delete.png" alt="Excluir um anúncio" style="max-width: 23px;"> 
                                                     </a>
 
-                            <a href="cadastrar.php?pag=cadastrar&id=<?php echo $coluna['id_usuario']; ?>">
+                            <a href="cadastrar.php?pag=cadastrar&id_usuario=<?php echo $coluna['id_usuario']; ?>">
                                 <img src="img\editar.png" alt="Editar um anúncio" style="max-width: 23px;">
                             </a>
                             </td>

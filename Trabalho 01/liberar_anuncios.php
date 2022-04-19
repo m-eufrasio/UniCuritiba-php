@@ -27,7 +27,7 @@
         $insere = "UPDATE anuncios SET status = '$status' WHERE id_anuncio = '{$_REQUEST['id_anuncio']}' AND id_usuario = '{$_REQUEST['id_usuario']}' ";
         $result_update = mysqli_query($con, $insere);
 
-        if ($result_update) print '<script> alert("Registro atualizado com sucesso!") </script>';
+        if ($result_update) print '<script> alert("Status atribuido com sucesso!") </script>';
         else print '<script> alert("Não foi possível atualizar!") </script>';
     }
     ?>

@@ -32,17 +32,7 @@
     <div class="white-box">
         <div class="wb-center">
 
-            <div class="camposBusca">
-                <form action="relatorio.php?botao=gravar" method="POST" name="form1">
-                    <div class="campos">
-                        <label for="" width="5%"> Código: </label>
-                        <input class="campdadosBusca" type="text" name="id">
-                        <label for="" width="5%"> Área: </label>
-                        <input class="campdadosBusca" type="text" name="area">
-                        <button type="submit" name="botao" value="Gerar" class="btnGerar"> Buscar </button>
-                    </div>
-                </form>
-            </div>
+        
             <br><br>
 
             <div class="tabeladiv">

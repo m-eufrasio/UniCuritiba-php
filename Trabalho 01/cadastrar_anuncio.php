@@ -62,13 +62,7 @@ if (@$_REQUEST['botao'] == "Gravar") {
 
 <?php }  ?>
 
- 
-  
-   
- 
 
-  
-   
         </div>
     </div>
 

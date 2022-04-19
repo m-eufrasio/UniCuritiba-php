@@ -30,7 +30,7 @@
         
         @$senha = md5 ($_POST['senha']);
 
-        if (!$_REQUEST['id']) {
+        if (!$_REQUEST['id_usuario']) {
             $insere = "INSERT into usuario (nome, login, senha, nivel) VALUES ('{$_POST['nome']}', '{$_POST['login']}', '$senha', '{$_POST['nivel']}')";
             $result_insere = mysqli_query($con, $insere);
 
@@ -43,9 +43,9 @@
             $insere = "UPDATE usuario SET 
 					login = '{$_POST['login']}'
                     , nome = '{$_POST['nome']}'
-					, senha = '{$_POST['senha']}'
+					, senha = '$senha'
 					, nivel = '{$_POST['nivel']}'
-					WHERE id_usuario = '{$_REQUEST['id_usuario']}'
+					WHERE id_usuario ='$id_usuario'
 				";
             $result_update = mysqli_query($con, $insere);
 
