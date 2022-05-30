@@ -10,6 +10,7 @@
 </head>
     <div class="sidebar">
         <header> Menu </header>
+        <hr>
         <a href="#">
             <i class="fas fa-qrcode"></i>
             <span>Painel</span>
@@ -40,6 +41,36 @@
         </a>
     </div>
 
+    <div class="topbar">
+        <img src="img/corp.jpg" alt="logo marca"> 
+
+        <i class="fas fa-light fa-user" id="user-icon"></i>
+    </div>
+
 <body>
+    <main>
+        <div class="container-dados-vagas">
+            <div class="dados-vagas">
+
+            </div>
+
+            <div class="dados-vagas">
+
+            </div>
+
+            <div class="dados-vagas">
+
+            </div>
+            
+        </div>
+
+        <div class="container-dados-vagas-02">
+            <div class="dashboard">
+
+            </div>
+            
+        </div>
+    </main>
+
 </body>
 </html>
