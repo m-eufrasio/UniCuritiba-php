@@ -1,1 +1,1 @@
-Projetos PHP da universidade.
+Alguns exercícios da universidade para treinar PHP
